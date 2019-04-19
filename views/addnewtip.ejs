@@ -1,0 +1,35 @@
+<% include ../partials/header %>
+   
+   <div id="contact-container">
+
+    <p class="welcomebox" style=" font-size: 22px; background-color: orange; padding: 10px 0">Add a new tip</p>
+
+     <div class="addnew">   
+   
+    <form accept-charset="UTF-8" action="/addnewtip" method="post">
+        
+        <label for="about">About?</label>
+        <input name="about" type="text" placeholder="Transport? Food? Price? Hotels?", pattern="^[a-zA-Z0-9!@#$&()\\-`.+,/\"]*$", title="Use only letters, please", required/><br>
+            
+        <label for="place">Where?</label>
+        <input name="place" type="text" placeholder="Where it is? Malta, Valetta, Gozo?",  pattern="^[a-zA-Z ]+$", title="Use only letters, please", required/><br>
+            
+        <label for="tip">Tip:</label>
+        <input name="tip" type="text" placeholder="write something more about it", required/><br>
+        
+        <label for="name">Your name:</label>
+        <input name="name" type="text" placeholder="What is your name?",  pattern="^[a-zA-Z ]+$", title="Use only letters, please" required/><br>
+        
+        <label for="date">Date:</label>
+        <input name="date" type="text" placeholder="When did you been there?", required/><br>
+        <br>    
+        <button class="button">Add New Tip</button>
+          
+    </form>
+
+    </div>
+
+</div>
+
+
+<% include ../partials/footer %>

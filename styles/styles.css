@@ -1,0 +1,650 @@
+@font-face {
+  font-family: 'CurlyStar';
+  src: url('/CurlyStars.ttf');
+}
+
+body {
+	width: 100%;
+	margin: 0 auto;
+	/* Background pattern from http://www.colourlovers.com/pattern */
+	background: url(/background-img.png) repeat;
+	font-family: 'Cabin Sketch', cursive, helvetica, arial;
+}
+
+/* ------------------------------- HEADER.EJS ------------------------------- */
+
+header {
+    min-height: 100px;
+    border-bottom: 3px ridge grey;
+    position: relative;
+    background-color: rgba(0,0,0,.2);
+}
+ 
+#logo img {
+    max-height: 100px;
+    padding: 0 8px 0 8px;
+    border: 2px double #eea82c;
+    border-radius: 25px;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+nav {
+    margin: 0 auto;
+    padding: 20px;
+    font-size: 32px;
+    font-family: 'CurlyStar';
+    text-align: center;
+}
+
+#menu {
+    list-style: none; 
+    margin: 0 auto;
+	padding: 5px 0 5px 0;
+}
+
+#menu li {
+    display: inline-block; 
+    padding: 0 5px;
+    margin: 0 5px;
+    border: 2px double #eea82c;
+    border-radius: 25px;
+    background-color: #fff;
+}
+
+#menu li a {
+    text-decoration: none; 
+    padding: 0 40px 0 40px;
+    color: #2e6eda;
+}
+
+#menu li:hover {
+    cursor: pointer;
+	-webkit-transform: scale(1.2);
+	-ms-transform: scale(1.2);
+	transform: scale(1.2);
+}  
+
+/* responsive menu */	
+#menu-button {
+   display: none;
+   border-radius: 25px;
+   float: left;
+   background-color: #fff;
+   color: orange;
+   width: 10%;
+   padding: 10px;
+}
+
+#menu-button:hover {
+    background-color: orange;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* jquery effect show/hide header */
+.hideMenu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 100;
+    height: 50px;
+    width: 50px;
+    background-color: #fff;
+    opacity: 0.8;
+    border: 2px double #eea82c;
+}
+
+.hideMenu img {
+    height: 100%;
+}
+
+.hideMenu:hover {
+    background-color: #fff;
+    opacity: 0.3;
+}
+
+/* change color of all boxes */
+.show-colors-box {
+    margin: 0 auto;
+    text-align: center;
+    color: #000;
+    cursor: pointer;
+    width: 80%;
+}
+
+.change-colors {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    color: orange;
+    display: none;
+}
+
+.change-colors > div {
+    display: inline-block;
+    margin: 0 30px;
+    border: 3px ridge grey;
+    padding: 5px;
+    min-width: 70px;
+}
+
+.change-colors > div:hover {
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+	transform: scale(1.2);
+    cursor: pointer;
+}
+
+/* ----------------------------- INDEX PAGE  -------------------------------- */
+
+#hello-malta {
+    color: #eea82c;
+    font-family: 'CurlyStar';
+}
+
+#read-more {
+    text-decoration: none;
+    color:  #eea82c;
+    margin: 2px;
+    border-top: 2px ridge #eea82c;
+    border-bottom: 2px ridge #eea82c;
+    padding: 1px 3px;
+}
+
+#read-more:hover {
+    color: #fff;
+    border-top: 2px ridge #fff;
+    border-bottom: 2px ridge #fff;
+}
+
+.welcome-txt {
+    font-size: 15px;
+}
+
+
+/* ------------------------------- MALTA PAGE -------------------------------- */
+
+.welcomebox {
+    background-color: #2D4B93;
+    color: #fff;
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    border: 3px ridge grey;
+    text-align: center;
+    opacity: 0.9;
+    padding-bottom: 15px;
+    font-size: 19px;
+}
+
+.welcome-txt {
+   padding: 0 10px;
+   display: none;
+}
+
+.welcomebox a {
+    text-decoration: none;
+    color:  #eea82c;
+}
+
+.welcomebox a:hover {
+   color:  #fff;
+}
+
+#showAll {
+    color: orange;
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.place {
+    float: left;
+    width: 29%;
+    min-height: 500px;
+    margin: 15px;
+    border: 3px ridge grey;
+    background-color: #2D4B93;
+    opacity: 0.9;
+}
+
+.place img {
+    border-top: 2px ridge #fff;
+    border-bottom: 2px ridge #fff;
+}
+
+.opis {
+    border: 1px ridge #fff;
+    margin: 5px;
+    padding: 5px;
+}
+
+.text {
+  overflow: hidden;
+}
+
+.more, .less {
+  text-align: right;
+  color: #fff;
+  cursor: pointer;
+}
+
+
+/* ------------------------------ ADDNEWPLACE PAGE  ------------------------- */
+
+#cities-malta{
+      font-family: 'CurlyStar';
+}
+
+.addnew {
+    background-color: orange;
+    width: 80%;
+    margin: 0 auto;
+    border: 3px ridge grey;
+    display: block;
+    padding: 20px 0;
+}
+
+.addnew label {
+    font-size: 22px;
+    color: #fff;
+    width: 20%;
+}
+
+.addnew input {
+    text-align: center;
+    width: 70%;
+    height: 20px;
+    float: right;
+    margin-right: 5px;
+}
+
+.button {
+    font-family: 'CurlyStar'; 
+    font-size: 20px;
+    font-weight: 600;
+    width: 20%;
+    text-align: center;
+    border: 3px ridge grey;
+    opacity: 0.8;
+}
+
+.button a {
+    text-decoration: none; 
+    color: #000;
+}
+
+.button:hover {
+    border: 3px ridge orange;
+    color: orange;
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+	transform: scale(1.1);
+    cursor: pointer;
+}
+
+
+/* ----------------------------- SHOW1MALTA PAGE  --------------------------- */
+
+.show-one-box {
+    margin: 0 auto;
+    width: 80%;
+    height: auto;
+    text-align: center;
+}
+
+.show1-change-color {
+    background-color: orange;
+    color: #fff;
+    opacity: 0.9;
+}
+
+.show-one-box h1 {
+    font-family: 'CurlyStar';
+    border: 3px ridge grey;
+}
+
+.show-one-box img {
+    border: 3px ridge grey;
+    background-color: #2D4B93;
+}
+
+.show-one-box > .opis {
+    border: 3px ridge grey;
+    text-align: justify;
+    background-color: orange;
+    color: #fff;
+    padding: 15px;
+    
+}
+
+.show-one-box p {
+    border: 3px ridge #fff;
+}
+
+
+/* ------------------------------- TIPS PAGE  ------------------------------- */
+
+#tip-box {
+    width: 80%;
+    margin: 0 auto;
+    opacity: 0.9;
+    text-align: center;
+    color: #fff;
+}
+
+.tip-one-box {
+    border: 3px ridge grey;
+    padding: 5px;
+    margin: 10px;
+    background-color: orange;
+}
+
+
+/* ------------------------------- CONTACT PAGE  ---------------------------- */
+
+#contact-container {
+    max-width: 1000px;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 22px;
+    margin-bottom: 22px;
+	overflow: hidden;
+	text-align: center;
+    font-family: 'CurlyStar';
+    opacity: 0.9;
+    color: orange;
+}
+
+.contact-box1 {
+    float: left;
+    width: 30%;
+    height: 350px;
+    border: 7px double orange;
+    background-color: #2D4B93;
+    font-size: 20px;
+    overflow: hidden;
+}
+
+.contact-box1 > h1 {
+    text-align: center;
+}
+
+.contact-box1 a {
+    text-decoration: none;
+    color: orange;
+}
+
+.contact-box1 a:hover {
+    color: #fff;
+}
+
+.contact-box1 i {
+    font-size: 22px;
+    padding: 5px;
+    color: orange;
+}
+
+.contact-box1 i:hover {
+    color: #fff;
+}
+
+.googlemap {
+	float: right;
+    width: 60%;
+	height: 350px;
+    overflow: hidden;
+	border: 7px double #2e6eda;
+	background-color: orange;
+}
+	
+#contact-container img {
+    height: 450px;
+    width: 98%;
+    border: 5px ridge grey;
+    margin-top: 22px;
+    background-color: #000;
+}
+
+/* JSON file */
+.contact-box2 {
+    margin-top: 20px;
+    width: 99%;
+    border: 5px ridge grey;
+    background-color: #2D4B93;
+    padding-bottom: 10px;
+}
+
+#contact-results {
+    width: 99%;
+    margin-top: 22px;
+    margin-bottom: 22px;
+    padding: 10px;
+	text-align: center;
+    font-family: 'Cabin Sketch';
+    border: 5px ridge grey;
+    background-color: #2D4B93;
+}
+
+#contact-results h2 {
+    font-family: 'CurlyStar';
+    text-align: center;
+}
+
+.contact-show {
+    display: none;
+}
+
+.contact-show a {
+   text-decoration: none;
+   color: #000;
+   padding: 10px;
+   margin: 5px;
+   background-color: #fff;
+}
+
+.contact-show a:hover {
+    color: orange;
+    border: 1px solid orange;
+    opacity: 0.9;
+}
+
+.editContact {
+    border: 5px ridge grey;
+    opacity: 0.9;
+    background-color: orange;
+    color: #fff;
+    padding-bottom: 20px;
+}
+
+
+/* ------------------------------- ABOUT PAGE  ------------------------------- */
+
+#about-container {
+    width: 85%;
+    height: 500px;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#box-right div {
+    display: none;
+}
+
+#box-right h2 {
+    font-family: 'CurlyStar';
+    font-size: 30px;
+    text-align: center;
+}
+
+#show {
+    float: left;
+    width: 25%;
+    height: 100%;
+    background-color: #000;
+    border: 3px ridge grey;
+    overflow: hidden;
+    opacity: 0.8;
+    background-color: #2D4B93;
+}
+
+#show button {
+    display: block;
+    margin: 0 auto;
+    min-width: 70%;
+    margin-top: 60px;
+    text-align: center;
+    background-color: #fff;
+    border: 3px ridge #fff;
+    font-family: 'CurlyStar'; 
+    font-size: 20px;
+    font-weight: 600;
+}
+
+#show button:hover {
+    color: orange;
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+	transform: scale(1.1);
+    cursor: pointer;
+}
+
+#box-right {
+    float: right;
+    width: 70%;
+    height: 100%;
+    background-color: #000;
+    border: 3px ridge grey;
+    color: #fff;
+    overflow: scroll;
+    opacity: 0.9;
+    background-color: #2D4B93;
+}
+
+#box-right p, h2 {
+    padding: 5px 20px;
+    text-align: justify;
+}
+
+#box-right ul li {
+    list-style-type: circle;
+    padding-top: 10px;
+}
+
+#box-right a {
+  text-decoration: none;
+  color: #fff;
+}
+
+#box-right a:hover {
+  color: orange;
+}
+
+.aside-links {
+	float: right;
+	padding: 30px;
+}
+
+/* -- Gallery --  */ 
+
+#small-photos li {  
+    width: 100px; 
+    height: 100px; 
+    display: inline; 
+    margin: 5px; 
+}
+
+#big-photo { 
+    width: 99%; 
+    padding: 5px 5px 0 5px;
+}
+
+.small-photo {
+    border: 3px ridge #fff;
+}
+
+.small-photo:hover {
+    cursor: pointer;
+	-webkit-transform: scale(1.4);
+	-ms-transform: scale(1.4);
+	transform: scale(1.4);
+}
+
+.big-photo { 
+    width: 99%; 
+    border: 3px ridge #fff;
+}
+
+/* ---------------------------------- FOOTER --------------------------------- */
+
+footer {
+    padding: 5px 0 5px 10px;
+    background-color: rgba(0,0,0,.2);
+    border-top: 3px ridge grey;
+}
+
+footer p {
+    font-size: small;
+    text-align: left;
+    color: #fff;
+}
+
+footer a {
+    float: right;
+    font-size: 23px;
+    color: #000;
+    margin: 0 20px 10px 20px;
+}
+
+footer a:hover {
+    color: #eea82c;
+}
+
+
+/* ------------------------------- RESPONSIVE MENU -------------------------- */
+
+@media screen and (min-width: 950px) {
+    #menu {
+        display: block !important;
+    }
+}
+        
+@media screen and (max-width: 950px) {
+    #menu {
+        display: none;
+    }
+    #menu li {
+        width: 50%; 
+        font-size: 60%;
+        overflow: hidden;
+    }
+    
+    #menu-button {
+        display: block;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: auto;
+    }
+    
+    #logo img {
+        max-width: 100px;
+        margin: 10px 0;
+    } 
+}
+
+
+@media (max-width: 500px) {
+    .contact-box1 p {
+        font-size: 15px;
+    }
+
+    .contact-box1 a {
+        font-size: 15px;
+    }
+}

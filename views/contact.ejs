@@ -1,0 +1,79 @@
+<% include ../partials/header %>
+       
+    <div id="contact-container">
+            
+        <div class="contact-box1">
+            <h1>Hello Malta !</h1>
+            <p>87, Dawret-Ix-Xatt</p>
+            <p>Xghajra, Malta</p>
+            <a href="mailto:contact@hellomalta.mt">contact<spam style="font-family:arial">@</spam>hellomalta.mt</a><br/>
+			<a href="tel:+356 1234 5678">tel: (+356) 1234 5678 </a><br/>
+			<br/>
+    		<a target="_blank" href="https://github.com/NataliaBujnowicz1987/hello-malta.git"><i class="icon-github-circled"></i></a>
+    		<a target="_blank" href="https://preview.c9users.io/natalia1987/project2019/malta/"><i class="icon-cloud"></i></a>
+    		<a target="blank" href="mailto:nataliabujnowicz1987@gmail.com"><i class="icon-gmail"></i></a>
+        </div>
+            
+        <div class="googlemap">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d25860.37391487298!2d14.546096!3d35.884623!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x130e5b4a41e2ebd5%3A0x17a300f6683c7fa3!2zWGfEp2FqcmEsIE1hbHRh!5e0!3m2!1spl!2sie!4v1553718869207" width="600" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+        <div style="clear: both"></div>
+            
+        <img src="/malta-contact.jpg"/>
+             
+        <div class="contact-box2">
+            <h1>Have a question? Let's talk!</h1>
+                <form accept-charset="utf-8" acction="/contact" method="post">
+                    
+                    <label for="firstname">Your name:</label><br>
+					<input type="text" id="name" name="firstname" placeholder="Your name", pattern="^[a-zA-Z ]+$", title="Use only letters, please", required><br>
+							
+					<label for="phone">Phone number:</label><br>
+				    <input type="tel" id="phone" name="phone" placeholder="Your Phone", pattern = "^[0-9]+$", title="Enter correct number, please", required><br>
+						
+					<label for"email">Email:</label><br>
+					<input type="email" id="email" name="email" placeholder="Your Email", required><br>
+					
+					<label for"message">Your message:</label><br>
+					<textarea cols="25" rows="5" id="message" name="message" placeholder="Your message", required></textarea><br>
+			
+					<label for"robot">Are you Robot?</label><br>
+					22+22=<br>
+					<input type="text" id="robot" name="robot" placeholder=" 30+10+4=", pattern="44", title="Try once more, please" required><br><br>
+						
+                    <button class="button">Send message</button>
+                </form>
+        </div>
+            
+
+        <div id="contact-results">
+            
+            <div id="hideShowResults">
+			    <h2>Would you like to see/update/delete your comment? </h2>
+					<button class="button" id="showResult">Yes</button> 
+					<button class="button" id="hideResult">No</button> 
+			</div>		
+            <hr>
+            
+            <div class="contact-show">
+                     <% contact.forEach(function(contact) { %>
+                            <p><b>Id:</b> <%- contact.id %></p>
+                            <p><b>Firstname:</b> <%- contact.firstname %></p>
+                            <p><b>Phone:</b> <%- contact.phone %></p>
+                            <p><b>Email:</b> <%- contact.email %></p>
+                            <p><b>Message:</b> <%- contact.message %></p>
+                            <br>
+                            <a class="button" href="/deletecontact/:id"<%- contact.id%> onclick="return confirm('Delete it? Are you sure?');"> Delete</a>
+                            <a class="button" href="/editcontact/<%- contact.id%>" onclick="return confirm('Update it? Are you sure?');"> Update</a>
+                            <br> <br>
+                            <hr>
+                <% }); %>
+            </div> 
+            
+        </div>
+        
+    </div>    
+    <div style="clear: both"></div>
+        
+        
+<% include ../partials/footer %>

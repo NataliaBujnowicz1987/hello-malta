@@ -1,0 +1,39 @@
+<% include ../partials/header %>
+
+   <div id="contact-container">
+   	
+        <% res.forEach(function(indOne) { %>
+   
+        <div class="editContact">
+            <h1>Here you can edit your message</h1>
+                
+                <form accept-charset="utf-8" action="/editcontact/<%= indOne.id %>" method="post">
+                    
+                    <label for="firstname">Your name:</label><br>
+					<input type="text" name="firstname" value="<%= indOne.firstname %>", pattern="^[a-zA-Z ]+$", title="Use only letters, please", required><br>
+					
+					 <label for="phone">Phone number:</label><br>
+					<input type="tel" name="phone" value="<%= indOne.phone %>", pattern = "^[0-9]+$", title="Enter correct number, please", required><br>
+
+					<label for"email">Email:</label><br>
+					<input type="email" name="email" value="<%= indOne.email %>", required><br>
+					
+					<label for"message">Your message:</label><br>
+					<input type="text" id="message" name="message" value="<%= indOne.message %>", required><br>
+						
+
+					<label for"robot">Are you Robot?</label><br>
+					22+22=<br>
+					<input type="text" id="robot" name="robot" placeholder=" 30+10+4=", pattern="44", title="Try once more, please", required><br><br>
+				
+					<button class="button">Update</button>
+					
+            	</form>
+          <% }); %>
+    
+    	</div>
+                
+    </div>
+
+
+<% include ../partials/footer %>

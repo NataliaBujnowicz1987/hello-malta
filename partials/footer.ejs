@@ -1,0 +1,235 @@
+<footer> 
+ 
+    <a target="blank" href="mailto:nataliabujnowicz1987@gmail.com"><i class="icon-gmail"></i></a>
+    <a target="_blank" href="https://preview.c9users.io/natalia1987/project2019/malta/"><i class="icon-cloud"></i></a>
+    <a target="_blank" href="https://github.com/NataliaBujnowicz1987/hello-malta.git"><i class="icon-github-circled"></i></a>
+        
+    <p>Created by Natalia Bujnowicz - Web Application Development Project 2019 - Lecturer Liam McCabe | Photography: M&M Wludyka (Malta)</p>   		
+  
+    <div style="clear:both"></div>
+     
+</footer>
+
+       
+
+<!---------------------------------------- RICH VISUAL EFFECTS  ----------------------------------------->
+
+<script>
+
+    // ########################################################################
+    // -------------------------------- HEADER --------------------------------
+    // ########################################################################
+    
+    
+    // rensponsive menu
+    $(document).ready(function(){
+        $('#menu-button').click(function(){
+        $('#menu').stop().slideToggle(300); 
+        }); 
+    });  
+     
+    
+    // hide/show header
+    $(document).ready(function(){
+        $(".hideMenu").click(function(){
+        $('header').slideToggle();
+        });
+    });
+    
+    // hide/show colors-box
+    $(document).ready(function(){
+        $(".show-colors-box").click(function(){
+        $('.change-colors').slideToggle();
+        });
+    });
+
+
+    // change CSS class (colours)
+    $(document).ready(function(){
+        $("#green-box").click(function() {
+        $(".welcomebox, .place, .contact-box1, .contact-box2, #show, #box-right, .addnew, .show1-change-color, .editContact, .tip-one-box, .rslides_tabs").css("background-color", "green");
+        });
+        $("#brown-box").click(function() {
+        $(".welcomebox, .place, .contact-box1, .contact-box2, #show, #box-right, .addnew, .show1-change-color, .editContact, .tip-one-box, .rslides_tabs").css("background-color", "#402313");
+        });
+        $("#blue-box").click(function() {
+        $(".welcomebox, .place, .contact-box1, .contact-box2, #show, #box-right, .addnew, .show1-change-color, .editContact, .tip-one-box, .rslides_tabs").css("background-color", "#2D4B93");
+        });
+        $("#black-box").click(function() {
+        $(".welcomebox, .place, .contact-box1, .contact-box2, #show, #box-right, .addnew, .show1-change-color, .editContact, .tip-one-box, .rslides_tabs").css("background-color", "#000");
+        });
+    });
+
+
+    // ########################################################################
+    // ---------------------------- INDEX PAGE  -------------------------------
+    // ########################################################################
+   
+   
+    //Java Script - 'Hello Malta' txt changes every 1sec
+    $(function () {
+        var messages = [],
+        index = 0;
+
+        messages.push('Hello Malta!');
+        messages.push('Enjoy Malta!');
+        messages.push('Visit Malta!');
+        messages.push('Love Malta!');
+
+        function cycle() {
+        $('#hello-malta').html(messages[index]);
+        index++;
+
+        if (index === messages.length) {
+            index = 0;
+        }
+
+        setTimeout(cycle, 1000);
+        }
+
+        cycle();
+    });
+    
+
+    // jQuery Welcome Text slideToggle
+      $(document).ready(function(){
+        $("#read-more").click(function(){
+        $('.welcome-txt').slideToggle(2000);
+        });
+    });
+    
+
+    //  jQuery - Responsive Slider 
+    $(function () {
+        $("#slider").responsiveSlides({
+          auto: true,
+          pager: true,
+          speed: 2000,
+          maxwidth: 1400
+        });
+    });
+      
+      
+    // ########################################################################
+    // ---------------------------- MALTA PAGE  -------------------------------
+    // ########################################################################  
+    
+    
+    //Java Script - Header txt changes every 0.5sec
+        $(function () {
+        var messages = [],
+        index = 0;
+
+        messages.push('Valetta');
+        messages.push('Mdina');
+        messages.push('Sliema');
+        messages.push('Gozo');
+        messages.push('Dingli');
+        messages.push('Mellieha');
+        messages.push('Mosta');
+        messages.push('Rabat');
+        messages.push('Luqa');
+        messages.push('Marsascala');
+        messages.push('Xghajra');
+        messages.push('Fgura');
+        messages.push('Senglea');
+        messages.push('Birgu');
+        messages.push('Marsaxlokk');
+        messages.push('Birzebbuga');
+        messages.push('Siggiewi');
+        messages.push('Mgarr');
+        messages.push("Saint Paul's Bay");
+        messages.push('Birkirkara');
+        messages.push('Zabbar');
+        messages.push('Kalkara');
+        messages.push('Gzira');
+
+        function cycle() {
+        $('#cities-malta').html(messages[index]);
+        index++;
+
+        if (index === messages.length) {
+            index = 0;
+        }
+
+        setTimeout(cycle, 500);
+        }
+
+        cycle();
+    });
+    
+    
+    // jQuery - See More/Less Description
+    $(document).ready(function(){
+      $(".opis").each(function(){
+        $(this).append("<div class='more'>More</div>");
+        var text = $(this).find('.text');
+        var wys = text.height();
+        text.css('height','80px');
+        $(this).on('click','.more',function(){
+          text.animate({height:wys},1000);
+          $(this).attr('class','less');
+          $(this).text("Less");
+        });
+        $(this).on('click','.less',function(){
+          text.animate({height:'80px'},1000);
+          $(this).attr('class','more');
+          $(this).text("More");
+        });
+      });
+    });
+    
+    
+    // ########################################################################
+    // ---------------------------- CONTACT PAGE ------------------------------
+    // ########################################################################  
+    
+  
+   	// jQuery - function to hide all contact form results
+   	$(document).ready(function () {
+   		$("#hideResult").click(function() {
+   		$(".contact-show").hide(3000);
+   		})
+   	});
+   
+   	// jQuery - function to show all contact form results
+   	$(document).ready(function () {
+   		$("#showResult").click(function() {
+   		$(".contact-show").show(3000);
+   	    })
+   	});
+   	
+		
+	// ########################################################################
+    // ---------------------------- ABOUT PAGE --------------------------------
+    // ######################################################################## 		
+    
+    
+    // jQuery - show only one box with content
+    $(document).ready(function () {
+        $('#box-right div').eq(0).show(); // show first (0) div in box-right
+        $("#show button").click(function () { //when click on button with id called show_
+            var id = $(this).attr('id'); //  attr() method sets or returns attributes and values of the selected elements
+            id = id.split('_'); // split() method is used to split a string into an array of substrings, and returns the new array
+        $("#box-right div").hide(); // hide all divs in box-right
+        $("#box-right #box_" + id[1]).fadeIn(); // and show only 1 box at the same time
+        });
+    });
+          
+            
+    // jQuery - gallery effect    
+     $(document).ready(function(){
+        $(".small-photo").on('click', function() {
+            $(".big-photo").attr("src", $(this).attr("src"));
+            $(this).attr('src');
+            $(this).siblings();
+        }); 
+    });
+
+ 
+       	
+</script>  
+       
+</body>
+    
+</html>

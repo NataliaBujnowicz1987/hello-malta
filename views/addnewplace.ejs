@@ -1,0 +1,38 @@
+<% include ../partials/header %>
+   
+   <div id="contact-container">
+
+    <p class="welcomebox" style="background-color: orange; padding:10px 0">Add a new place, description, photo etc.</p>
+
+     <div class="addnew">   
+   
+    <form accept-charset="UTF-8" ref= "uploadForm" action="/addnewplace" method="post" enctype="multipart/form-data">
+        
+        <label for="place">Place:</label>
+        <input name="place" type="text" placeholder="Please enter place or city", pattern="^[a-zA-Z ]+$", title="Use only letters, please", required/><br>
+            
+        <label for="description">Description:</label>
+        <input name="description" type="text" placeholder="Tell us more about this place", required/><br>
+            
+        <label for="activity">Activity:</label>
+        <input name="activity" type="text" placeholder="What we can do there?",  pattern="^[a-zA-Z ]+$", title="Use only letters, please", required/><br>
+                
+        <label for="image">Image:</label>
+        <input name="imageFile" type="file", pattern="[a-z0-9]+\.[a-z]{3,}$" title="Incorrect image format", required/><br>
+        
+        <label for="name">Your name:</label>
+        <input name="name" type="text" placeholder="What is your name?",  pattern="^[a-zA-Z ]+$", title="Use only letters, please" required/><br>
+        
+        <label for="date">Date:</label>
+        <input name="date" type="text" placeholder="When did you been there?", required/><br>
+        <br>    
+        <button class="button">Add New Place</button>
+          
+    </form>
+
+    </div>
+
+</div>
+
+
+<% include ../partials/footer %>

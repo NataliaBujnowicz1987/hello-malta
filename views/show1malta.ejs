@@ -1,0 +1,29 @@
+<% include ../partials/header %>
+
+    <div class="show-one-box">
+        <% res1.forEach(function(contact) { %>
+             
+        <h1 class="show1-change-color"><%- contact.Place%></h1>
+        
+        <img style="width:99%"src="/<%= contact.Image %>">
+         
+        <div class="opis">
+            <div class="text">
+                <%- contact.Description%>
+            </div>
+        </div>
+          
+        <p class="show1-change-color"><b>What we can do there?</b> <%- contact.Activity%></p>
+       
+        <p class="show1-change-color">Username: <%- contact.Name%> | Visit Date: <%- contact.Date%></p> 
+           
+        <button class="button"><a href="/placesmalta"><b>Back</b></a></button>
+        <button class="button"><a href="/deletesql/<%= contact.Id %>" onclick="return confirm('Delete it? Are you sure?');"><b>Delete</b></a></button>
+        <button class="button"><a href="/editmalta/<%= contact.Id %>" onclick="return confirm('Update it? Are you sure?');"><b>Edit</b></a></button>  
+        
+        <% }); %>
+    
+        <br><br>
+    </div>
+
+<% include ../partials/footer %>

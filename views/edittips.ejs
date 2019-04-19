@@ -1,0 +1,35 @@
+<% include ../partials/header %>
+   
+   <div id="contact-container">
+
+        <p class="welcomebox" style=" font-size: 22px; background-color: orange; padding:10px 0">Edit your tip</p>
+    
+        <div class="addnew">   
+            <% res1.forEach(function(tips) {%> 
+           
+            <form accept-charset="UTF-8" action="/edittips/<%=tips.Id%>" method="post">
+                <label for="about">About?</label>
+                <input name="about" type="text" value="<%=tips.About%>", pattern="^[a-zA-Z0-9!@#$&()\\-`.+,/\"]*$", title="Use only letters, please", required/><br>
+                    
+                <label for="place">Where?</label>
+                <input name="place" type="text" value="<%=tips.Place%>", Valetta, Gozo?",  pattern="^[a-zA-Z ]+$", title="Use only letters, please", required/><br>
+                    
+                <label for="tip">Tip:</label>
+                <input name="tip" type="text" value="<%=tips.Tip%>", required/><br>
+
+                <label for="name">Your name:</label>
+                <input name="name" type="text" value="<%=tips.Name%>",  pattern="^[a-zA-Z ]+$", title="Use only letters, please" required/><br>
+                
+                <label for="date">Date:</label>
+                <input name="date" type="text" value="<%=tips.Date%>", required/>
+                
+                <br><br>
+                <button class="button">Edit</button>
+            </form>
+            <% }); %>
+        </div>
+
+    </div>
+
+
+<% include ../partials/footer %>

@@ -1,0 +1,37 @@
+<% include ../partials/header %>
+
+    <div class="welcomebox">
+        <p>Here you can see more info about <span id="cities-malta"></span>.<br>
+        Would you like to add new place? Click here -> <a href="/addnewplace"> add new place</a></p>
+        
+    </div><br>
+ 
+    <div id="showAll"> 
+        <% res1.forEach(function(contact) { %>
+             
+        <div class="place">
+          
+            <h3><%- contact.Place%></h3>
+            
+            <img style="width:99%; height:160px;"src="/<%= contact.Image %>">
+             
+            <div class="opis">
+                <div class="text"><%- contact.Description%></div>
+            </div>
+              
+            <p><b>What we can do there?</b> <br><%- contact.Activity%></p>
+            <hr>
+            <p>Username: <%- contact.Name%> <br> Visit Date: <%- contact.Date%></p> 
+            <hr>     
+               
+            <button class="button"><a href="/show1malta/<%= contact.Id %>"><b>Show</b></a></button>
+            <button class="button"><a href="/deletesql/<%= contact.Id %>" onclick="return confirm('Delete it? Are you sure?');"><b>Delete</b></a></button>
+            <button class="button"><a href="/editmalta/<%= contact.Id %>" onclick="return confirm('Update it? Are you sure?');"><b>Edit</b></a></button>
+            
+        </div>    
+        
+        <% }); %>
+        <div style="clear:both"></div>     
+    </div>
+
+<% include ../partials/footer %>

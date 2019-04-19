@@ -1,0 +1,30 @@
+<% include ../partials/header %>
+
+    <div class="welcomebox" style=" background-color: orange">
+        <p>Would you like to add new tip? Click here -> <a style= "color:purple" href="/addnewtip"> add new tip</a></p>
+    </div>
+    <br>
+   
+    <div id="tip-box">
+   
+        <% res1.forEach(function(tips) { %>
+        
+        <div class="tip-one-box">
+     
+            <h3><%- tips.About%> -  <%- tips.Place%></h3> 
+            <hr>
+            <p> <%- tips.Tip%></p> 
+            <hr>
+            <p><%- tips.Name%>  |  <%- tips.Date%></p> 
+            
+            <button class="button"><a href="/deletetip/<%= tips.Id %>" onclick="return confirm('Delete it? Are you sure?');"><b>Delete</b></a></button>
+            <button class="button"><a href="/edittips/<%= tips.Id %>" onclick="return confirm('Update it? Are you sure?');"><b>Edit</b></a></button>
+        
+        </div>
+        
+        <% }); %>
+         
+    </div>        
+    
+<% include ../partials/footer%>
+      

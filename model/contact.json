@@ -1,0 +1,37 @@
+[
+    {
+        "firstname": "marysia",
+        "phone": "087458547",
+        "id": 1,
+        "email": "marie@gmail.com",
+        "message": "Hi! I would like to receive more information about Malta"
+    },
+    {
+        "firstname": "Chris",
+        "phone": "0874442141",
+        "id": 2,
+        "email": "bujnowicz1980@gmail.com",
+        "message": "Hi! I really like you page. It is great!"
+    },
+    {
+        "firstname": "margaret",
+        "phone": "4237532",
+        "id": 3,
+        "email": "mama@mama.pc",
+        "message": "hi natalie, i really like this page :)"
+    },
+    {
+        "firstname": "Marie",
+        "phone": "0874441454",
+        "id": 4,
+        "email": "marie@gmail.com",
+        "message": "Hi! I would like to travel to Malta next summer. Could you tell me where I should go first?"
+    },
+    {
+        "firstname": "David",
+        "phone": "0892468576",
+        "id": 5,
+        "email": "dvd@gmail.com",
+        "message": "Hello World!"
+    }
+]
