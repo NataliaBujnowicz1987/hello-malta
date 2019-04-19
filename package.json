@@ -1,7 +1,7 @@
 {
   "name": "malta",
   "version": "1.0.0",
-  "description": "Share your impressions from Malta",
+  "description": "Share your expressions from Malta",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
